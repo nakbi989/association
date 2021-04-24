@@ -11,7 +11,6 @@ import NavBar from './components/misc/Navigation';
 import NewThreadPage from './components/pages/NewThreadPage';
 import ThreadPage from './components/pages/ThreadPage';
 import HistoryPage from "./components/pages/HistoryPage";
-
 const App =({location,isAuthenticated}) => (
     <div className="ui container">
         {isAuthenticated && <NavBar/>}

@@ -45,15 +45,15 @@ class NewThreadForm extends Component{
 
     render(){
         return(
-            <Form onSubmit={this.onSubmit} loading={this.state.loading} >
+           <Form onSubmit={this.onSubmit} loading={this.state.loading} >
                 {this.state.errors.global && (
                     <Message negative>
-                        <Message.Header>Something went wrong</Message.Header>
+                        <Message.Header>....</Message.Header>
                         <p>{this.state.errors.global}</p>
                     </Message>
                 )}
                 <Form.Field error={!!this.state.errors.title}>
-                    <label>Title</label>
+                    <label>Titre</label>
                     <input
                         type="title"
                         id="title"
@@ -64,7 +64,7 @@ class NewThreadForm extends Component{
                     {this.state.errors.title && <InlineError text={this.state.errors.title}/>}
                 </Form.Field>
                 <Form.Field>
-                    <label>Body</label>
+                    <label>description</label>
                     <textarea
                         type="body"
                         id="body"
@@ -73,7 +73,7 @@ class NewThreadForm extends Component{
                         onChange={this.onChange}
                     />
                 </Form.Field>
-                <Button primary>Create</Button>
+                <Button primary>Crée</Button>
             </Form>
         );
     }

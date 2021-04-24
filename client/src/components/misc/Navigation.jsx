@@ -9,6 +9,7 @@ const NavBar = ({username,logout}) => (
     <Menu secondary pointing>
         <Menu.Item as={Link} to='/'>Home</Menu.Item>
         <Menu.Item as={Link} to={`/users/${username}`}>{username}</Menu.Item>
+
         <Menu.Menu position='right'>
             <Menu.Item as={Link} to='/newthread'>New</Menu.Item>
             <Menu.Item onClick={() => logout()}>Logout</Menu.Item>

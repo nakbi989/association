@@ -8,6 +8,7 @@ class SignupForm extends Component{
         this.state={
             data: {
                 username:'',
+                email:'',
                 password:''
             },
             loading: false,
@@ -31,6 +32,7 @@ class SignupForm extends Component{
         if(!this.state.data.password){
             errors.password="password required";
         }
+
         this.setState({
             errors:errors
         })
@@ -64,6 +66,7 @@ class SignupForm extends Component{
                     />
                     {this.state.errors.username && <InlineError text={this.state.errors.username}/>}
                 </Form.Field>
+               
                 <Form.Field error={!!this.state.errors.password}>
                     <label htmlFor="password">password</label>
                     <input

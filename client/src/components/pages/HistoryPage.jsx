@@ -46,7 +46,7 @@ class HistoryPage extends Component{
                <List.Item as={Link} to={`/thread/${thread._id}`} key={thread._id}>
                    <List.Content>
                         <List.Header as='a'>{thread.title}</List.Header>
-                       <List.Description><span>submitted by {thread.author} </span><Moment fromNow>{thread.created}</Moment></List.Description>
+                       <List.body><span>submitted by {thread.author} </span><Moment fromNow>{thread.created}</Moment></List.body>
                    </List.Content>
                </List.Item>
            )

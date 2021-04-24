@@ -13,6 +13,7 @@ router.post('/', (req,res)=>{
         else {
             const newUser = new User({username});
             newUser.setPassword(password);
+
             newUser.save()
                 .then(newUser => {
                     if (newUser) {

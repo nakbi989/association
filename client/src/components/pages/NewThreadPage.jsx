@@ -3,7 +3,6 @@ import NewThreadForm from '../forms/NewThreadForm'
 import {connect} from 'react-redux'
 import {Segment} from 'semantic-ui-react'
 import PropTypes from 'prop-types';
-import axios from 'axios'
 import {createThread} from '../../actions/thread';
 
 class NewThreadPage extends Component{
@@ -18,7 +17,7 @@ class NewThreadPage extends Component{
     render(){
         return(
             <Segment>
-                <h2>Create a new thread</h2>
+                <h2>Crée un nouveau association</h2>
                 <NewThreadForm submit={this.submit}/>
             </Segment>
         )
